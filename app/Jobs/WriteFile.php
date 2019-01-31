@@ -8,6 +8,7 @@ use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Bus\Dispatchable;
 use Illuminate\Support\Facades\Storage;
+use Pusher\Laravel\Facades\Pusher;
 
 class WriteFile implements ShouldQueue
 {
@@ -35,10 +36,10 @@ class WriteFile implements ShouldQueue
      */
     public function handle()
     {
-        for ($i=0; $i < 10; $i++) {
-            sleep(5);
+        for ($i=0; $i < 10; $i++) {            
             $filename = 'queue'.$i.'.txt';
             Storage::put($filename, 'Queue laravel');
-        }
+		}	
+		Pusher::trigger('messages', 'my-event', ['message' => 'teste']);			
     }
 }
