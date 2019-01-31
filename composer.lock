@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "42128b8ce859ef80cf1ac7d0b02b8a7f",
+    "content-hash": "90d450763000757241628bb71d0e4664",
     "packages": [
         {
             "name": "cakephp/chronos",

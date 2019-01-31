@@ -21,7 +21,12 @@ class WriteFile implements ShouldQueue
     public function __construct()
     {
         //
-    }
+	}
+	
+	public function tags() 
+	{
+		return ['Job escrever arquivos em batch'];
+	}
 
     /**
      * Execute the job.
@@ -31,7 +36,7 @@ class WriteFile implements ShouldQueue
     public function handle()
     {
         for ($i=0; $i < 10; $i++) {
-            sleep(10);
+            sleep(5);
             $filename = 'queue'.$i.'.txt';
             Storage::put($filename, 'Queue laravel');
         }

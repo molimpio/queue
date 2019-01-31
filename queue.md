@@ -8,5 +8,11 @@
 ## Usando Laravel Horizon
 ### Fornece um dashboard para gerenciamento dos jobs
 - Precisa usar driver de conexão redis
-- Instalação <i><u>composer require laravel/horizon</i></u>
-- Publish: <i><u>php artisan vendor:publish --provider="Laravel\Horizon\HorizonServiceProvider"</i></u>
+  - <i><u>composer require predis/predis</i></u>
+- Instalação Horizon
+  - <i><u>composer require laravel/horizon</i></u>
+- Publish: <i><u>php artisan horizon:install</i></u>
+- Criar table failed 
+  - <i><u>php artisan queue:failed-table
+  - php artisan migrate</i></u>
+- Run: <i><u>php artisan horizon</i></u>

@@ -16,7 +16,3 @@ Route::get('/', function () {
 });
 
 Route::get('/file', 'FileController@index');
-
-Horizon::auth(function ($request) {
-    // return true / false;
-});
